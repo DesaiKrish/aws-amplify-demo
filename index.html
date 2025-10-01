@@ -29,8 +29,11 @@ method: 'POST',
 headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ a: parseInt(a), b: parseInt(b) })
 });
-
+  
 const data = await response.json();
+
+console.log(data)
+  
 result.textContent = data.sum !== undefined ? 'Sum: ' + data.sum : 'Error: ' +
 data.error;
 } catch (err) {
