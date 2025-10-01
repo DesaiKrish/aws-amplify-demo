@@ -32,9 +32,9 @@ body: JSON.stringify({ a: parseInt(a), b: parseInt(b) })
   
 const data = await response.json();
 
-console.log(data)
+console.log(data.body.sum)
   
-result.textContent = data.sum !== undefined ? 'Sum: ' + data.sum : 'Error: ' +
+result.textContent = data.body.sum !== undefined ? 'Sum: ' + data.body.sum : 'Error: ' +
 data.error;
 } catch (err) {
 result.textContent = 'Error: ' + err.message;
